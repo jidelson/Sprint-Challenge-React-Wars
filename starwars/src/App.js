@@ -11,11 +11,13 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   
-    
+
+  
     useEffect(() => {
         axios.get('https://swapi.py4e.com/api/people/')
     .then(function(response){
-        console.log(response);
+        console.log(response.data.results);
+        setCharacter(response.data.results);
     })
     .catch(function(error){
       console.log(error);

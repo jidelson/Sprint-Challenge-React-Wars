@@ -2,6 +2,11 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Character from './components/Character';
 import axios from 'axios';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
+
+
+
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -30,14 +35,20 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <div>
+      <Button color="danger">Click!</Button>
+      </div>
+      <div>
       {character.map((characterData, index) =>
     {
       return <Character key={index} character={characterData}/>
     }
     )}
       </div>
+
+    
     </div>
   );
 };
 
 export default App;
+

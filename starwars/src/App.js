@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Character from './components/Character.js';
 import axios from 'axios';
+import styled from 'styled-components'
 
 const baseURL = 'https://swapi.py4e.com/api/people'
 
@@ -32,8 +33,6 @@ const App = () => {
           return <Character key={index} characterData={characterData} />
         })
       }
-
-      
 
     </div>
   );
